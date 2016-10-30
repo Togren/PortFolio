@@ -1,0 +1,59 @@
+/*   CONSTANTS     */
+$dark-gray : #393939;
+$light-gray : #808080;
+$bright-orange : #D34405;
+$dark-orange : #C04200;
+$blue : #005780;
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*       BASE STYLES       */
+h1, h2, h3, p, a{
+  font-family: "Lato Light", sans-serif;
+  color: white;
+}
+
+h2 {
+  font-size: 24pt;
+}
+h3 {
+  font-size: 18pt;
+}
+p {
+  font-size: 12pt;
+}
+
+
+/*      CONTAINERS      */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  background: $dark-gray;
+}
+
+.main-nav {
+  display:flex;
+  flex-direction: column;
+}
+
+.main-nav a {
+  border-top: 1px solid white;
+}
+
+.site_name {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+img.logo {
+  height: 50%;
+  align-self: center;
+}
+
+.title {
+  margin-left: auto;
+  align-self: center;
+}
+
+
