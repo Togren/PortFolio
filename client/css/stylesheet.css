@@ -1,6 +1,18 @@
-/*   CONSTANTS     */
+/* =======================================================
+                         CONSTANTS
+======================================================== */
 @import url("https://fonts.googleapis.com/css?family=Lato");
-/*       BASE STYLES       */
+/* =======================================================
+                         BASE STYLES
+======================================================== */
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
 h1, h2, h3, p, a {
   font-family: "Lato Light", sans-serif;
   color: white; }
@@ -9,35 +21,67 @@ h2 {
   font-size: 24pt; }
 
 h3 {
-  font-size: 18pt; }
+  font-size: 1.2em; }
 
 p {
   font-size: 12pt; }
 
-/*      CONTAINERS      */
+a {
+  font-size: 12pt;
+  text-decoration: none; }
+
+/* =======================================================
+                          CONTAINERS
+======================================================== */
 .main-header {
+  background: #393939;
   display: flex;
   flex-direction: column;
-  background: #393939; }
+  flex: 5; }
+  .main-header .site-name-container {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    width: 100%; }
+    .main-header .site-name-container img.logo {
+      width: 30%;
+      padding: 0.5em;
+      margin-left: 5%; }
+    .main-header .site-name-container img.title {
+      width: 45%; }
+  .main-header .main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 4; }
+    .main-header .main-nav a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border-top: 2px solid white;
+      font-size: 1.2em; }
 
-.main-nav {
+.main-content {
+  background: #808080;
+  flex: 30; }
+
+.main-footer {
+  background: #393939;
   display: flex;
-  flex-direction: column; }
-
-.main-nav a {
-  border-top: 1px solid white; }
-
-.site_name {
-  flex: 2;
-  display: flex;
-  flex-direction: row; }
-
-img.logo {
-  height: 50%;
-  align-self: center; }
-
-.title {
-  margin-left: auto;
-  align-self: center; }
+  justify-content: space-between;
+  flex: 1; }
+  .main-footer .copyright {
+    margin-left: 3%;
+    opacity: 0.5;
+    align-self: center; }
+  .main-footer .icon-container {
+    width: 25%;
+    margin-right: 5%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex; }
+    .main-footer .icon-container img {
+      height: 60%; }
 
 /*# sourceMappingURL=stylesheet.css.map */

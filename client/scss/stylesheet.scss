@@ -1,4 +1,6 @@
-/*   CONSTANTS     */
+/* =======================================================
+                         CONSTANTS
+======================================================== */
 $dark-gray : #393939;
 $light-gray : #808080;
 $bright-orange : #D34405;
@@ -7,7 +9,19 @@ $blue : #005780;
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-/*       BASE STYLES       */
+/* =======================================================
+                         BASE STYLES
+======================================================== */
+html {
+   height:100%;
+ }
+
+body {
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
 h1, h2, h3, p, a{
   font-family: "Lato Light", sans-serif;
   color: white;
@@ -17,43 +31,90 @@ h2 {
   font-size: 24pt;
 }
 h3 {
-  font-size: 18pt;
+  font-size: 1.2em;
 }
 p {
   font-size: 12pt;
 }
+a {
+  font-size: 12pt;
+  text-decoration: none;
+}
 
 
-/*      CONTAINERS      */
+/* =======================================================
+                          CONTAINERS
+======================================================== */
+
+//Header
 .main-header {
-  display: flex;
-  flex-direction: column;
   background: $dark-gray;
-}
-
-.main-nav {
-  display:flex;
-  flex-direction: column;
-}
-
-.main-nav a {
-  border-top: 1px solid white;
-}
-
-.site_name {
-  flex: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex:5;
+  .site-name-container {
+    display: flex;
+    flex-direction: row;
+    flex:2;
+    width:100%;
+    img {
+      &.logo {
+        width: 30%;
+        padding: 0.5em;
+        margin-left: 5%;
+      }
+      &.title {
+        width: 45%;
+      }
+    }
+  }
+
+  .main-nav {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    flex: 4;
+    a {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border-top: 2px solid white;
+      font-size: 1.2em;
+    }
+  }
 }
 
-img.logo {
-  height: 50%;
-  align-self: center;
+//Content
+.main-content {
+  background: $light-gray;
+  flex: 30;
 }
 
-.title {
-  margin-left: auto;
-  align-self: center;
+//Footer
+.main-footer {
+  background: $dark-gray;
+  display:flex;
+  justify-content: space-between;
+  flex: 1;
+
+  .copyright {
+    margin-left:3%;
+    opacity: 0.5;
+    align-self: center;
+  }
+
+  .icon-container {
+    width: 25%;
+    margin-right:5%;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+    img {
+      height:60%;
+    }
+  }
 }
+
 
 
