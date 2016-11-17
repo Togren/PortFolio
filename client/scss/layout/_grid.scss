@@ -1,0 +1,14 @@
+@import '../helpers/_extends.scss';
+
+/* =======================================================
+                          MAIN CONTAINER
+======================================================== */
+
+//Main, full-screen container
+.main-container {
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+}

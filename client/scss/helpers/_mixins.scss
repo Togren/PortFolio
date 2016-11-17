@@ -1,0 +1,14 @@
+/* =======================================================
+                         MIXINS
+======================================================== */
+
+@mixin flexItemProps($flex-basis) {
+  flex: 0 1 $flex-basis;
+}
+
+@mixin backgroundImageProject($image-url) {
+  background: url($image-url) no-repeat center;
+  background-size: contain;
+  height:0;
+  padding:0 1em;
+}

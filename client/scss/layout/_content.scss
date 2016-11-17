@@ -1,0 +1,44 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+/* =======================================================
+                         MAIN CONTENT
+======================================================== */
+
+.main-content {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  background: $bg-color;
+
+  .project-container {
+    position: relative;
+
+    img {
+      display:block;
+      width:100%;
+    }
+
+    .project-text {
+      position: absolute;
+      bottom:0;
+      background-color: $text-bg;
+      line-height: 0.9;
+      border-top: 1px solid $border-color;
+      p {
+        margin: 1em;
+      }
+    }
+  }
+}
+
+//Change image ratio's at breakpoints
+//@media screen and (min-width:500px) {
+//  @for $i from 1 to 5 {
+//    .project-#{$i} {
+//
+//
+//    }
+//  }
+//
+//}
