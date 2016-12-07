@@ -2,33 +2,24 @@
                          FOOTER
 ======================================================== */
 
-//Imports
-@import '../helpers/variables';
-@import '../helpers/extends';
-@import '../helpers/mixins';
-
 .main-footer {
-  display:flex;
-  @include flexItemProps(10vh);
+  @extend %flexRow;
+  @include flexBasisOnly(10vh);
 
-  background: $footer-bg;
+  background-color: palette(grey, x-dark);
   justify-content: space-between;
 
   .copyright {
-    margin-left: 1em;
+    font-size: em(8px);
+    margin-left: em(16px, 16px);
     align-self: flex-end ;
   }
 
   .icon-container {
-    display:flex;
-    width: 50%;
-    margin-right: 1em;
-    justify-content: flex-end;
-    align-items: center;
-    img {
-      fill: $picton-blue;
-      height: 60%;
-      margin: 0 0.5em;
-    }
+    @extend %flexRow;
+    @extend %crossAxisCenterAlign;
+    width: 40%;
+    margin-right: em(16px, 16px);
+    justify-content: space-between;
   }
 }

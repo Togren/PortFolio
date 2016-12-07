@@ -1,0 +1,54 @@
+/* =======================================================
+                       GLOBAL CONFIG
+======================================================== */
+
+// Font Stacks
+
+$font-family--lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--oswald: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary   : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--light       : 300;
+$font-weight--medium      : 400;
+$font-weight--bold        : 700;
+
+// Descriptive Base Colors
+
+$white        : #fff;
+$black        : #000;
+$bismark      : #446D80;
+$picton-blue  : #37AEE5;
+
+// Color Palette Modifiers
+
+$color-palettes: (
+  grey: (
+    xx-light  : lighten($bismark, 30%),
+     x-light  : lighten($bismark, 15%),
+       light  : lighten($bismark, 8%),
+        base  : $bismark,
+        dark  : darken($bismark, 8%),
+      x-dark  : darken($bismark, 15%),
+     xx-dark  : darken($bismark, 30%)
+  ),
+  blue: (
+        light : lighten($picton-blue, 15%),
+         base : $picton-blue,
+         dark : darken($picton-blue, 15%),
+       x-dark : darken($picton-blue, 30%)
+  )
+);
+
+// Text
+
+$base__fontSize   : 16px;
+$base__lineHeight : 24px;
+$letter-space     : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+
+// Path to Assets

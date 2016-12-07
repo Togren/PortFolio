@@ -1,0 +1,42 @@
+/* =======================================================
+                         BASE STYLES
+======================================================== */
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: palette(grey, x-dark);
+  color: $white;
+  font-size: $base__fontSize;
+  font-family: $font-family--lato;
+  line-height: ($base__lineHeight/$base__fontSize);
+}
+
+// Text
+
+h1 {
+  @extend %hdln-prim;
+}
+
+h2 {
+  @extend %hdln-sec;
+}
+
+h3 {
+  font-size: em(18px);
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  font-weight: $font-weight--medium;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+

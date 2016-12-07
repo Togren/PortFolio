@@ -1,26 +1,21 @@
 /* =======================================================
                          HEADER
 ======================================================== */
-@import '../helpers/mixins';
-@import '../helpers/variables';
-@import '../helpers/extends';
 
 .main-header {
-  display: flex;
-  flex-direction: column;
-  @include flexItemProps(30vh);
-  background: $header-bg;
+  @extend %flexColumn;
+  @include flexBasisOnly(30vh);
 
   .site-name-container {
-    display: flex;
+    @extend %flexRow;
     img {
       &.logo {
         width: 30%;
-        padding: 0.5em;
-        margin-left: 1em;
+        padding: em(8px);
+        margin-left: em(16px);
       }
       &.title {
-        margin-right: 1.5em;
+        margin-right: em(24px);
         @media screen and (min-width: 500px) {
           margin-right: 0;
           width:40%;
@@ -34,13 +29,12 @@
   }
 
   .main-nav {
-    display: flex;
-    flex-direction: column;
+    @extend %flexColumn;
     a {
-      display: flex;
+      @extend %flexRow;
+      @extend %crossAxisCenterAlign;
       justify-content: center;
-      align-items: center;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid rgba($white, 0.5);
       padding: 1em 0;
       @media screen and (min-width: 500px) {
         border-top: none;
@@ -48,13 +42,16 @@
     }
 
     @media screen and (min-width: 500px) {
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
       flex-direction: row;
+
       justify-content: space-around;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid rgba($white, 0.5);
     }
   }
 
   @media screen and (min-width: 500px) {
-    @include flexItemProps(25vh);
+    @include flexBasisOnly(25vh);
   }
 }

@@ -1,0 +1,39 @@
+/* =======================================================
+                         HELPERS
+======================================================== */
+
+// Flex directions
+
+%flexColumn {
+  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+%flexRow {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+%mainAxisCenterAlign {
+
+}
+
+%crossAxisCenterAlign {
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+}
+
+%centeredAbsoluteElement {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}

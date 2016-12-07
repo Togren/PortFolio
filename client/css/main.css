@@ -1,3 +1,61 @@
+/* =======================================================
+                        UTILITIES
+======================================================== */
+/* =======================================================
+                       GLOBAL CONFIG
+======================================================== */
+/* =======================================================
+                       GLOBAL CONFIG
+======================================================== */
+/* =======================================================
+                        FUNCTIONS
+======================================================== */
+/* =======================================================
+                       FUNCTIONS
+======================================================== */
+/* =======================================================
+                         HELPERS
+======================================================== */
+/* =======================================================
+                         HELPERS
+======================================================== */
+.main-header, .main-header .main-nav, .main-content {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column; }
+
+.main-header .site-name-container, .main-header .main-nav a, .main-footer, .main-footer .icon-container {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex; }
+
+.main-header .main-nav a, .main-content, .main-footer .icon-container {
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center; }
+
+.btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* =======================================================
+                        MIXINS
+======================================================== */
+/* =======================================================
+                         MIXINS
+======================================================== */
+/* =======================================================
+                        BASE STYLES
+======================================================== */
+/* =======================================================
+                     NORMALIZE RESET
+======================================================== */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -403,52 +461,39 @@ template {
   display: none; }
 
 /* =======================================================
-                         CONSTANTS
+                      BASE STYLES
 ======================================================== */
 /* =======================================================
-                         TYPOGRAPHY
+                         BASE STYLES
 ======================================================== */
-@font-face {
-  font-family: 'Lato Light';
-  src: url("../fonts/Lato-Light.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
-  /* Safari, Android, iOS */ }
-@font-face {
-  font-family: 'Lato Italic';
-  src: url("../fonts/Lato-Italic.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Lato-Italic.woff2") format("woff2"), url("../fonts/Lato-Italic.woff") format("woff"), url("../fonts/Lato-Italic.ttf") format("truetype");
-  /* Safari, Android, iOS */ }
-body {
-  font-size: 16px; }
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-h1, h2, h3, p, a {
-  font-family: "Lato Light", sans-serif;
-  color: white; }
+body {
+  background-color: #29424e;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; }
+
+h3 {
+  font-size: 1.125em; }
 
 a {
-  text-decoration: none; }
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400; }
 
-.project-text p {
-  font-family: "Lato Italic", sans-serif;
-  font-size: 0.8em;
-  color: #0F181C; }
-
-.copyright {
-  font-size: 0.4em; }
+img {
+  display: block;
+  width: 100%; }
 
 /* =======================================================
-                         CONSTANTS
+                        LAYOUT STYLES
 ======================================================== */
 /* =======================================================
-                         EXTENDS
-======================================================== */
-/* =======================================================
-                         MIXINS
-======================================================== */
-/* =======================================================
-                         EXTENDS
+                     PLACEHOLDER SELECTORS
 ======================================================== */
 /* =======================================================
                           MAIN CONTAINER
@@ -461,115 +506,129 @@ a {
   align-items: stretch; }
 
 /* =======================================================
+                        HEADER
+======================================================== */
+/* =======================================================
                          HEADER
 ======================================================== */
-/* =======================================================
-                         MIXINS
-======================================================== */
-/* =======================================================
-                         CONSTANTS
-======================================================== */
-/* =======================================================
-                         EXTENDS
-======================================================== */
 .main-header {
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 30vh;
-  background: #0F181C; }
-  .main-header .site-name-container {
-    display: flex; }
-    .main-header .site-name-container img.logo {
-      width: 30%;
-      padding: 0.5em;
-      margin-left: 1em; }
-    .main-header .site-name-container img.title {
-      margin-right: 1.5em; }
-      @media screen and (min-width: 500px) {
-        .main-header .site-name-container img.title {
-          margin-right: 0;
-          width: 40%; } }
+  -webkit-flex: 0 0 30vh;
+  -ms-flex: 0 0 30vh;
+  flex: 0 0 30vh; }
+  .main-header .site-name-container img.logo {
+    width: 30%;
+    padding: 0.5em;
+    margin-left: 1em; }
+  .main-header .site-name-container img.title {
+    margin-right: 1.5em; }
     @media screen and (min-width: 500px) {
-      .main-header .site-name-container {
-        flex: 1 0 auto; } }
-  .main-header .main-nav {
-    display: flex;
-    flex-direction: column; }
-    .main-header .main-nav a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      padding: 1em 0; }
-      @media screen and (min-width: 500px) {
-        .main-header .main-nav a {
-          border-top: none; } }
+      .main-header .site-name-container img.title {
+        margin-right: 0;
+        width: 40%; } }
+  @media screen and (min-width: 500px) {
+    .main-header .site-name-container {
+      flex: 1 0 auto; } }
+  .main-header .main-nav a {
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1em 0; }
     @media screen and (min-width: 500px) {
-      .main-header .main-nav {
-        flex-direction: row;
-        justify-content: space-around;
-        border-top: 1px solid rgba(255, 255, 255, 0.5); } }
+      .main-header .main-nav a {
+        border-top: none; } }
+  @media screen and (min-width: 500px) {
+    .main-header .main-nav {
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      justify-content: space-around;
+      border-top: 1px solid rgba(255, 255, 255, 0.5); } }
   @media screen and (min-width: 500px) {
     .main-header {
-      flex: 0 1 25vh; } }
+      -webkit-flex: 0 0 25vh;
+      -ms-flex: 0 0 25vh;
+      flex: 0 0 25vh; } }
 
 /* =======================================================
-                         CONSTANTS
-======================================================== */
-/* =======================================================
-                         MIXINS
+                        CONTENT
 ======================================================== */
 /* =======================================================
                          MAIN CONTENT
 ======================================================== */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #0F181C; }
-  .main-content .project-container {
-    position: relative; }
-    .main-content .project-container img {
-      display: block;
-      width: 100%; }
-    .main-content .project-container .project-text {
-      position: absolute;
-      bottom: 0;
-      background-color: rgba(255, 255, 255, 0.7);
-      line-height: 0.9;
-      border-top: 1px solid rgba(255, 255, 255, 0.5); }
-      .main-content .project-container .project-text p {
-        margin: 1em; }
+.project-container {
+  position: relative; }
 
+/* =======================================================
+                        FOOTER
+======================================================== */
 /* =======================================================
                          FOOTER
 ======================================================== */
-/* =======================================================
-                         CONSTANTS
-======================================================== */
-/* =======================================================
-                         EXTENDS
-======================================================== */
-/* =======================================================
-                         MIXINS
-======================================================== */
 .main-footer {
-  display: flex;
-  flex: 0 1 10vh;
-  background: #0F181C;
+  -webkit-flex: 0 0 10vh;
+  -ms-flex: 0 0 10vh;
+  flex: 0 0 10vh;
+  background-color: #29424e;
   justify-content: space-between; }
   .main-footer .copyright {
+    font-size: 0.5em;
     margin-left: 1em;
     align-self: flex-end; }
   .main-footer .icon-container {
-    display: flex;
-    width: 50%;
+    width: 40%;
     margin-right: 1em;
-    justify-content: flex-end;
-    align-items: center; }
-    .main-footer .icon-container img {
-      fill: #37AEE5;
-      height: 60%;
-      margin: 0 0.5em; }
+    justify-content: space-between; }
+
+/* =======================================================
+                        COMPONENTS
+======================================================== */
+/* =======================================================
+                   PLACEHOLDER SELECTORS
+======================================================== */
+/* =======================================================
+                        PLACEHOLDERS
+======================================================== */
+h1 {
+  color: #fff;
+  font-size: 2.625em;
+  line-height: 1.09524;
+  font-weight: 400; }
+
+h2 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  line-height: 1.16667; }
+
+.btn {
+  color: #fff;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.16667em;
+  font-size: 1.125em;
+  margin-bottom: 3em;
+  padding: 1em;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 0.4em;
+  bottom: 0;
+  width: 80%; }
+  .btn:focus {
+    outline: none; }
+
+/* =======================================================
+                     BUTTONS
+======================================================== */
+/* =======================================================
+                          Buttons
+======================================================== */
+/* =======================================================
+                     ICONS
+======================================================== */
+/* =======================================================
+                          ICONS
+======================================================== */
+.icon__social {
+  height: 60%;
+  width: auto; }
 
 /*# sourceMappingURL=main.css.map */

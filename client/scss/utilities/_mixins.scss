@@ -2,8 +2,24 @@
                          MIXINS
 ======================================================== */
 
-@mixin flexItemProps($flex-basis) {
-  flex: 0 1 $flex-basis;
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin flexBasisOnly($flex-basis) {
+  -webkit-flex: 0 0 $flex-basis;
+  -ms-flex: 0 0 $flex-basis;
+  flex: 0 0 $flex-basis;
 }
 
 @mixin backgroundImageProject($image-url) {

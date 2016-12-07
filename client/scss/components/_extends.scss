@@ -1,0 +1,40 @@
+/* =======================================================
+                        PLACEHOLDERS
+======================================================== */
+
+// Headlines
+
+%hdln-prim {
+  color: $white;
+  font-size: em(42px);
+  line-height: (46px/42px);
+  font-weight: $font-weight--medium;
+}
+
+%hdln-sec {
+  color: $white;
+  font-weight: $font-weight--light;
+  font-size: em(24px);
+  letter-spacing: $letter-space;
+  line-height: (28px/24px);
+}
+
+// Buttons
+
+%btn {
+  color: $white;
+  font-family: $font-family--oswald;
+  letter-spacing: em(3px, 18px);
+  font-size: em(18px);
+  margin-bottom: em(54px, 18px);
+  padding: em(18px, 18px);
+  background:none;
+  border: 2px solid $white;
+  border-radius: $br--default;
+  bottom:0;
+  width:80%;
+
+  &:focus {
+    outline:none;
+  }
+}
