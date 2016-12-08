@@ -5,7 +5,6 @@
 // Social icons
 
 .icon__social {
-  height:15%;
   width: 15%;
   margin-top: em(16px);
   margin-left: em(5px);
@@ -19,6 +18,13 @@
     margin-right: em(16px);
   }
 
+  @media screen and (min-width:500px) {
+    width: 10%;
+  }
+
+  @media screen and (min-width:724px) {
+    width: 5%;
+  }
 }
 
 // Logo
@@ -26,6 +32,12 @@
 .logo {
   flex: 1 0 auto;
   width: 80%;
-  margin: em(16px, 16px) 0;
+  margin: em(16px) 0;
   align-self: center;
+
+  @media screen and (min-width: 724px) {
+    max-width:25%;
+    margin-right:auto;
+    margin-left: em(32px);
+  }
 }

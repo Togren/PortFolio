@@ -520,6 +520,10 @@ img {
     @media screen and (min-width: 500px) {
       .main-header .main-nav a {
         border-top: none; } }
+    @media screen and (min-width: 724px) {
+      .main-header .main-nav a {
+        align-items: end;
+        font-size: 0.75em; } }
   @media screen and (min-width: 500px) {
     .main-header .main-nav {
       -webkit-flex-direction: row;
@@ -527,11 +531,18 @@ img {
       flex-direction: row;
       justify-content: space-around;
       border-top: 1px solid rgba(255, 255, 255, 0.5); } }
-@media screen and (min-width: 500px) {
+  @media screen and (min-width: 724px) {
+    .main-header .main-nav {
+      max-width: 35%;
+      border: none;
+      margin-right: 2em;
+      margin-bottom: 2em; } }
+@media screen and (min-width: 724px) {
   .main-header {
-    -webkit-flex: 0 0 25vh;
-    -ms-flex: 0 0 25vh;
-    flex: 0 0 25vh; } }
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: space-between; } }
 
 /* =======================================================
                         CONTENT
@@ -612,7 +623,6 @@ h2 {
                           ICONS
 ======================================================== */
 .icon__social {
-  height: 15%;
   width: 15%;
   margin-top: 1em;
   margin-left: 0.3125em;
@@ -621,12 +631,23 @@ h2 {
     margin-left: 1em; }
   .icon__social:last-child {
     margin-right: 1em; }
+  @media screen and (min-width: 500px) {
+    .icon__social {
+      width: 10%; } }
+  @media screen and (min-width: 724px) {
+    .icon__social {
+      width: 5%; } }
 
 .logo {
   flex: 1 0 auto;
   width: 80%;
   margin: 1em 0;
   align-self: center; }
+  @media screen and (min-width: 724px) {
+    .logo {
+      max-width: 25%;
+      margin-right: auto;
+      margin-left: 2em; } }
 
 /* =======================================================
                      CONTAINERS

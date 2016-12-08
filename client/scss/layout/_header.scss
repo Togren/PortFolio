@@ -15,8 +15,14 @@
       justify-content: center;
       border-top: 1px solid rgba($white, 0.5);
       padding: 1em 0;
+
       @media screen and (min-width: 500px) {
         border-top: none;
+      }
+
+      @media screen and (min-width: 724px) {
+        align-items: end;
+        font-size: em(12px);
       }
     }
 
@@ -28,9 +34,20 @@
       justify-content: space-around;
       border-top: 1px solid rgba($white, 0.5);
     }
+
+    @media screen and (min-width:724px) {
+      max-width:35%;
+      border: none;
+      margin-right: em(32px);
+      margin-bottom: em(32px);
+    }
   }
 
-  @media screen and (min-width: 500px) {
-    @include flexBasisOnly(25vh);
+  @media screen and (min-width: 724px) {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+
+    justify-content: space-between;
   }
 }
