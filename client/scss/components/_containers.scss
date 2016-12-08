@@ -1,0 +1,13 @@
+/* =======================================================
+                          CONTAINERS
+======================================================== */
+
+// Containers
+
+.container {
+  @include e(social) {
+    @extend %flexRow;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

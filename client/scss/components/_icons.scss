@@ -5,6 +5,27 @@
 // Social icons
 
 .icon__social {
-  height: 60%;
-  width: auto;
+  height:15%;
+  width: 15%;
+  margin-top: em(16px);
+  margin-left: em(5px);
+  margin-right: em(5px);
+
+  &:first-child {
+    margin-left: em(16px);
+  }
+
+  &:last-child {
+    margin-right: em(16px);
+  }
+
+}
+
+// Logo
+
+.logo {
+  flex: 1 0 auto;
+  width: 80%;
+  margin: em(16px, 16px) 0;
+  align-self: center;
 }

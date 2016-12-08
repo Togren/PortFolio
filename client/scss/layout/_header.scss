@@ -4,32 +4,11 @@
 
 .main-header {
   @extend %flexColumn;
-  @include flexBasisOnly(30vh);
-
-  .site-name-container {
-    @extend %flexRow;
-    img {
-      &.logo {
-        width: 30%;
-        padding: em(8px);
-        margin-left: em(16px);
-      }
-      &.title {
-        margin-right: em(24px);
-        @media screen and (min-width: 500px) {
-          margin-right: 0;
-          width:40%;
-        }
-      }
-    }
-
-    @media screen and (min-width: 500px) {
-      flex: 1 0 auto;
-    }
-  }
 
   .main-nav {
     @extend %flexColumn;
+    flex: 1 0 auto;
+
     a {
       @extend %flexRow;
       @extend %crossAxisCenterAlign;

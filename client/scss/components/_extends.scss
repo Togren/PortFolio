@@ -29,7 +29,8 @@
   margin-bottom: em(54px, 18px);
   padding: em(18px, 18px);
   background:none;
-  border: 2px solid $white;
+  border-width: 2px;
+  border-style: solid;
   border-radius: $br--default;
   bottom:0;
   width:80%;

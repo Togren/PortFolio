@@ -19,7 +19,7 @@
 /* =======================================================
                          HELPERS
 ======================================================== */
-.main-header, .main-header .main-nav, .main-content {
+.main-header, .main-header .main-nav, .main-content, .main-footer {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -27,17 +27,17 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column; }
 
-.main-header .site-name-container, .main-header .main-nav a, .main-footer, .main-footer .icon-container {
+.main-header .main-nav a, .container__social {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex; }
 
-.main-header .main-nav a, .main-content, .main-footer .icon-container {
+.main-header .main-nav a, .main-content {
   align-items: center;
   -webkit-align-items: center;
   -ms-flex-align: center; }
 
-.btn {
+.btn__project {
   position: absolute;
   left: 0;
   right: 0;
@@ -471,7 +471,7 @@ template {
   box-sizing: border-box; }
 
 body {
-  background-color: #29424e;
+  background-color: #0f181c;
   color: #fff;
   font-size: 16px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -511,23 +511,8 @@ img {
 /* =======================================================
                          HEADER
 ======================================================== */
-.main-header {
-  -webkit-flex: 0 0 30vh;
-  -ms-flex: 0 0 30vh;
-  flex: 0 0 30vh; }
-  .main-header .site-name-container img.logo {
-    width: 30%;
-    padding: 0.5em;
-    margin-left: 1em; }
-  .main-header .site-name-container img.title {
-    margin-right: 1.5em; }
-    @media screen and (min-width: 500px) {
-      .main-header .site-name-container img.title {
-        margin-right: 0;
-        width: 40%; } }
-  @media screen and (min-width: 500px) {
-    .main-header .site-name-container {
-      flex: 1 0 auto; } }
+.main-header .main-nav {
+  flex: 1 0 auto; }
   .main-header .main-nav a {
     justify-content: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -542,11 +527,11 @@ img {
       flex-direction: row;
       justify-content: space-around;
       border-top: 1px solid rgba(255, 255, 255, 0.5); } }
-  @media screen and (min-width: 500px) {
-    .main-header {
-      -webkit-flex: 0 0 25vh;
-      -ms-flex: 0 0 25vh;
-      flex: 0 0 25vh; } }
+@media screen and (min-width: 500px) {
+  .main-header {
+    -webkit-flex: 0 0 25vh;
+    -ms-flex: 0 0 25vh;
+    flex: 0 0 25vh; } }
 
 /* =======================================================
                         CONTENT
@@ -564,19 +549,12 @@ img {
                          FOOTER
 ======================================================== */
 .main-footer {
-  -webkit-flex: 0 0 10vh;
-  -ms-flex: 0 0 10vh;
-  flex: 0 0 10vh;
-  background-color: #29424e;
   justify-content: space-between; }
   .main-footer .copyright {
     font-size: 0.5em;
     margin-left: 1em;
-    align-self: flex-end; }
-  .main-footer .icon-container {
-    width: 40%;
-    margin-right: 1em;
-    justify-content: space-between; }
+    text-align: center;
+    opacity: .5; }
 
 /* =======================================================
                         COMPONENTS
@@ -600,7 +578,7 @@ h2 {
   letter-spacing: 1px;
   line-height: 1.16667; }
 
-.btn {
+.btn, .btn__project {
   color: #fff;
   font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.16667em;
@@ -608,11 +586,12 @@ h2 {
   margin-bottom: 3em;
   padding: 1em;
   background: none;
-  border: 2px solid #fff;
+  border-width: 2px;
+  border-style: solid;
   border-radius: 0.4em;
   bottom: 0;
   width: 80%; }
-  .btn:focus {
+  .btn:focus, .btn__project:focus {
     outline: none; }
 
 /* =======================================================
@@ -621,6 +600,11 @@ h2 {
 /* =======================================================
                           Buttons
 ======================================================== */
+.btn__project {
+  border: none;
+  color: #0f181c;
+  background-color: rgba(255, 255, 255, 0.5); }
+
 /* =======================================================
                      ICONS
 ======================================================== */
@@ -628,7 +612,30 @@ h2 {
                           ICONS
 ======================================================== */
 .icon__social {
-  height: 60%;
-  width: auto; }
+  height: 15%;
+  width: 15%;
+  margin-top: 1em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em; }
+  .icon__social:first-child {
+    margin-left: 1em; }
+  .icon__social:last-child {
+    margin-right: 1em; }
+
+.logo {
+  flex: 1 0 auto;
+  width: 80%;
+  margin: 1em 0;
+  align-self: center; }
+
+/* =======================================================
+                     CONTAINERS
+======================================================== */
+/* =======================================================
+                          CONTAINERS
+======================================================== */
+.container__social {
+  width: 100%;
+  justify-content: flex-end; }
 
 /*# sourceMappingURL=main.css.map */

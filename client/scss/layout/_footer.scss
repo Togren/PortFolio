@@ -3,23 +3,13 @@
 ======================================================== */
 
 .main-footer {
-  @extend %flexRow;
-  @include flexBasisOnly(10vh);
-
-  background-color: palette(grey, x-dark);
+  @extend %flexColumn;
   justify-content: space-between;
 
   .copyright {
     font-size: em(8px);
     margin-left: em(16px, 16px);
-    align-self: flex-end ;
-  }
-
-  .icon-container {
-    @extend %flexRow;
-    @extend %crossAxisCenterAlign;
-    width: 40%;
-    margin-right: em(16px, 16px);
-    justify-content: space-between;
+    text-align:center;
+    opacity: .5;
   }
 }

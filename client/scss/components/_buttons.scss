@@ -3,6 +3,13 @@
 ======================================================== */
 
 .btn {
-  @extend %centeredAbsoluteElement;
   @extend %btn;
+
+  @include e(project) {
+    @extend %btn;
+    @extend %centeredAbsoluteElement;
+    border: none;
+    color: palette(grey, xx-dark);
+    background-color: rgba($white, 0.5);
+  }
 }
